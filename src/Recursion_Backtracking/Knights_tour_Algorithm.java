@@ -1,5 +1,8 @@
 package Recursion_Backtracking;
 
+import java.time.Duration;
+import java.time.Instant;
+
 /**
  * Here is a recursive Algorithm to print knight moves starting from (0,0) without repeating position on a 8X8 chess board.
  */
@@ -13,8 +16,11 @@ public class Knights_tour_Algorithm {
             for(int j=0;j<8;j++)
                 board[i][j]=-1;
         board[0][0]=0;
+        Instant start = Instant.now();
         if(solve(0,0,1))
             printboard();
+        Instant end = Instant.now();
+        System.out.println("Execution Time: "+ Duration.between(start,end).toMillis()+" milliseconds");
     }
 
     private static void printboard() {

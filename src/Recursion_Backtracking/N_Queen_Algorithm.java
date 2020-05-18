@@ -4,7 +4,10 @@ package Recursion_Backtracking;
  * here is an algorithm to print the first possible arrangement of N queens in NXN matrix.
  */
 
+import java.time.Duration;
+import java.time.Instant;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class N_Queen_Algorithm {
     private static int[][] board;
@@ -14,11 +17,16 @@ public class N_Queen_Algorithm {
         int n;
         try {
             n = input.nextInt();
+            Instant start = Instant.now();
             if(n<4)
                 System.out.println("Not possible for the given value of n");
-            else{board = new int[n][n];
-               if(setQueen(0))
-                   printBoard(board.length);}
+            else{
+                board = new int[n][n];
+                if(setQueen(0))
+                   printBoard(board.length);
+            }
+            Instant end = Instant.now();
+            System.out.println("Execution Time: "+ Duration.between(start,end).toMillis());
             System.out.println("Want to try another no. y/n: ");
             String check = input.next();
             if (check.equals("y") || check.equals("Y")) {
