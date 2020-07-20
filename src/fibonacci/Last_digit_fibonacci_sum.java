@@ -8,9 +8,7 @@ public class Last_digit_fibonacci_sum {
         Scanner input = new Scanner(System.in);
         long n, m;   // n>=m
         long k = 60; // this is the pisano period for 10
-        System.out.print("From: ");
         m = input.nextInt();
-        System.out.print("To: ");
         n = input.nextInt();
         if (n == 0) {
             System.out.println(0);
