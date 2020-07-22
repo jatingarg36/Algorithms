@@ -1,8 +1,8 @@
 package Tree;
 
-public class Priority_Queue {
+public class Heap {
 
-    private void build_max_heap(int[] heap){
+    public void build_max_heap(int[] heap){
         for(int i=heap.length/2;i>=0;i--){
             max_Heapify(heap,i,heap.length);
         }
@@ -59,16 +59,21 @@ public class Priority_Queue {
     }
     public static void main(String[] args) {
         int[] heap = new int[]{1,4,3,7,8,9,10};
-        new Priority_Queue().build_max_heap(heap);
+        new Heap().build_max_heap(heap);
 
         for (int value : heap) {
             System.out.println(value);
         }
         System.out.println();
-        new Priority_Queue().build_min_heap(heap);
+        new Heap().build_min_heap(heap);
         for (int value : heap) {
             System.out.println(value);
         }
 
+    }
+
+    public void pop(int[] arr) {
+        arr[0]=-1;
+        build_max_heap(arr);
     }
 }

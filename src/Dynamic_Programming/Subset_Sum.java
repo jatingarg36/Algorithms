@@ -2,7 +2,7 @@ package Dynamic_Programming;
 
 import java.util.Scanner;
 
-public class subset_sum {
+public class Subset_Sum {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int n=input.nextInt();
