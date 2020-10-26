@@ -41,7 +41,7 @@ public class Binary_Search_Tree {
         inorder(root.right);
     }
 
-    void preorder(Node root){
+    void preorder(Node root){                   // gives the sorted array
         if(root==null){
             return;
         }

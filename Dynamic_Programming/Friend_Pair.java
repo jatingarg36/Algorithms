@@ -2,7 +2,7 @@ package Dynamic_Programming;
 
 import java.util.Scanner;
 
-public class friend_pair {
+public class Friend_Pair {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int n;

@@ -1,5 +1,7 @@
 package Sorting;
 
+import java.util.Arrays;
+
 public class Counting_Sort {
     public static void main(String[] args) {
         int[] given_arr = new int[]{10,2,8,1,4,6,5,7,9};
@@ -17,6 +19,7 @@ public class Counting_Sort {
     private void counting_sort(int[] given_arr) {
         int max = find_max(given_arr);
         int[] arr = new int[max+1];
+        Arrays.fill(arr,0);
         for (int value : given_arr) {
             arr[value]++;
         }
